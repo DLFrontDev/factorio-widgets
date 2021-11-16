@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <div>
+            <div class="header-container">
+                <h2 data-toggle="solar-panel-calc-form">Solar panel ratio</h2>
+            </div>
+            <form id="solar-panel-calc-form" class="open">
+                <div class="form-content-wrapper">
+                    <p>0.168 * (MaxPanelOutput kW / AccumulatorCapacity kJ) * CycleDuration s * Efficiency / 100 = Accumulators per Solar Panels</p>
+        
+                    <label>
+                        <p>Max Panel Output</p>
+                        <select class="solar-panel-calculator" name="" id="pn-out">
+                            <option value="60">Solar Panel</option>
+                            <option selected value="400">Flat Solar Panel 1</option>
+                            <option value="800">Flat Solar Panel 2</option>
+                            <option value="1600">Flat Solar Panel 3</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p>Accumulator Capacity</p>
+                        <select class="solar-panel-calculator" name="" id="ac-cap">
+                            <option selected value="5000">Accumulator</option>
+                            <option value="50000">Holmium Accumulator</option>
+                            <option value="250000">Naquium Accumulator</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p>Cycle Duration (minutes)</p>
+                        <input class="solar-panel-calculator" placeholder="6.94" id="cl-dur">
+                    </label>
+                    <label>
+                        <p>Efficiency</p>
+                        <input class="solar-panel-calculator" placeholder="100" id="pl-eff">
+                    </label>
+                    <label>
+                        <p>Target MW</p>
+                        <input class="solar-panel-calculator" placeholder="0" id="tg-mw">
+                    </label>
+        
+                    <h4 id="solar-calc-target"></h4>
+                    <h4 id="solar-calc-item-target"></h4>
+                    <button type="reset" id="solar-panel-calc-reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
